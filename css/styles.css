@@ -794,12 +794,14 @@ textarea {
   height: 40px;
   width: 100%;
   padding-left: 42px;
+  outline: none;
 }
 
 .form-field label {
   margin-bottom: 4px;
 }
 .form-field textarea {
+  outline: none;
   border: 1px solid rgba(33, 33, 33, 0.2);
   border-radius: 4px;
   height: 120px;
@@ -856,4 +858,39 @@ textarea {
   letter-spacing: 0.06em;
 
   color: #ffffff;
+}
+
+.form-field input:focus + svg {
+  fill: var(--link-color);
+}
+.form-field input:focus {
+  border: 1px solid var(--link-color);
+  border-radius: 4px;
+}
+
+.checkbox-form {
+  margin-right: 7px;
+  width: 16px;
+  height: 15px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 2px;
+  border: 1px solid #212121;
+}
+
+.form-coordination input:checked + label .checkbox-form {
+  background: #2196f3;
+  border: 1px solid #2196f3;
+}
+.checkbox-form svg {
+  display: none;
+}
+.form-coordination input:checked + label .checkbox-form svg {
+  display: block;
+}
+.label-conteiner {
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
